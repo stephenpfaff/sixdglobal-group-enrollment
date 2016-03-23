@@ -6,12 +6,12 @@
     <!-- ====================================================================== -->
 
     <groupId>com.sixdglobal.aem</groupId>
-    <artifactId>com.sixdglobal.aem.salesforce</artifactId>
+    <artifactId>com.sixdglobal.aem.reports</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>com.sixdglobal.aem.salesforce - Reactor Project</name>
-    <description>Maven Multimodule project for com.sixdglobal.aem.salesforce.</description>
+    <name>com.sixdglobal.aem.reports - Reactor Project</name>
+    <description>Maven Multimodule project for com.sixdglobal.aem.reports.</description>
 
     <prerequisites>
         <maven>3.0.2</maven>

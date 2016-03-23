@@ -7,7 +7,7 @@
     <!-- ====================================================================== -->
     <parent>
         <groupId>com.sixdglobal.aem</groupId>
-        <artifactId>com.sixdglobal.aem.salesforce</artifactId>
+        <artifactId>com.sixdglobal.aem.reports</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -15,9 +15,9 @@
     <!-- P R O J E C T D E S C R I P T I O N -->
     <!-- ====================================================================== -->
 
-    <artifactId>com.sixdglobal.aem.salesforce-bundle</artifactId>
+    <artifactId>com.sixdglobal.aem.reports-bundle</artifactId>
     <packaging>bundle</packaging>
-    <name>com.sixdglobal.aem.salesforce Bundle</name>
+    <name>com.sixdglobal.aem.reports Bundle</name>
 
     <dependencies>
         <dependency>
@@ -85,7 +85,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Bundle-SymbolicName>com.sixdglobal.aem.com.sixdglobal.aem.salesforce-bundle</Bundle-SymbolicName>
+                        <Bundle-SymbolicName>com.sixdglobal.aem.com.sixdglobal.aem.reports-bundle</Bundle-SymbolicName>
                     </instructions>
                 </configuration>
             </plugin>

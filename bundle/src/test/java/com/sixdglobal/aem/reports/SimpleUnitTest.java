@@ -1,4 +1,4 @@
-package com.sixdglobal.aem.salesforce;
+package com.sixdglobal.aem.reports;
 
 import static org.junit.Assert.*;
 
