@@ -3,7 +3,7 @@ package com.sixdglobal.aem.reports.servlets;
 import org.apache.felix.scr.annotations.*;
 import org.apache.felix.scr.annotations.Property;
 import org.apache.jackrabbit.api.JackrabbitSession;
-import l.Authorizable;
+import org.apache.jackrabbit.api.security.user.Authorizable;
 import org.apache.jackrabbit.api.security.user.Group;
 import org.apache.jackrabbit.api.security.user.UserManager;
 import org.apache.sling.api.SlingHttpServletRequest;
@@ -47,7 +47,7 @@ public class GroupEnrollment extends SlingAllMethodsServlet {
     @Reference
     private SlingRepository repository;
 
-    private static final Logger log = LoggerFactory.getLogger(GroupEnrollmentReport.class);
+    private static final Logger log = LoggerFactory.getLogger(GroupEnrollment.class);
 
     private String fileName = "group-report.xlsx";
 
@@ -288,7 +288,7 @@ public class GroupEnrollment extends SlingAllMethodsServlet {
         } catch (RepositoryException e) {
             log.error("RepositoryException occurred while obtaining groups: "+e.getMessage());
         } catch(Exception e) {
-            log.error("Exception occurred on GroupEnrollmentReport.java: "+e.getMessage());
+            log.error("Exception occurred on GroupEnrollment.java: "+e.getMessage());
         }
         return workbook;
     }

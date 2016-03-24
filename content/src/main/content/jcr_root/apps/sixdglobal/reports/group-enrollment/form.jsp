@@ -1,4 +1,4 @@
-<%@include file="/apps/common/global.jsp"%>
+<%@include file="/libs/foundation/global.jsp"%>
 <%@ page import="javax.jcr.Node,java.util.Calendar,javax.jcr.Property,java.text.SimpleDateFormat,java.util.Locale" %>
 <%
     Node form = resourceResolver.getResource(currentNode.getPath()).adaptTo(Node.class);
@@ -24,13 +24,13 @@
 <h1>Group Enrollment Report</h1>
 <h4>View existing or create new group enrollment report for all users in CQ.</h4>
 <p>
-<form action="/bin/lexmark/groupenrollment" id="report" name="report" method="POST">
-    <input type="hidden" name="savePath" id="savePath" value="/apps/lexmark/tools/users/run" />
+<form action="/bin/sixdglobal/groupenrollment" id="report" name="report" method="POST">
+    <input type="hidden" name="savePath" id="savePath" value="/apps/sixdglobal/reports/group-enrollment/run" />
     <input type="button" id="send" value="Generate Report" />
 </form>
 <%if(hasFile){%>
 <br/>
-<input type="button" id="download" value="Download Report" onclick="window.open('/apps/lexmark/tools/users/run/group-report.xlsx')" />
+<input type="button" id="download" value="Download Report" onclick="window.open('/apps/sixdglobal/reports/group-enrollment/run/group-report.xlsx')" />
 <br/>
 <div style="padding-left: 4px;">Last generated on: <%=date%></div>
 <%}%>
@@ -40,7 +40,7 @@
         var formData = $("#report").serialize();
         $.ajax({
             type: 'POST',
-            url:'/bin/lexmark/groupenrollment',
+            url:'/bin/sixdglobal/groupenrollment',
             data:formData,
             success: function(msg){
                 alert(msg); //display the data returned by the servlet
