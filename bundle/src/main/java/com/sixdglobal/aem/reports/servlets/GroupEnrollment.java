@@ -108,6 +108,13 @@ public class GroupEnrollment extends SlingAllMethodsServlet {
             //Maintain array of groups per user to avoid reporting duplicates
             ArrayList groupList = new ArrayList();
 
+            Row initDataRow = sheet.createRow(row);
+            Cell initDataCell1 = initDataRow.createCell(0);
+            initDataCell1.setCellValue("User");
+            Cell initDataCell2 = initDataRow.createCell(1);
+            initDataCell2.setCellValue("Groups");
+            row++;
+
             //For each user create a new row
             while ( nodeIter.hasNext() ) {
                 int cell = 0;

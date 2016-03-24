@@ -95,6 +95,11 @@
                 <version>4.8.1</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.apache.jackrabbit</groupId>
+                <artifactId>jackrabbit-api</artifactId>
+                <version>2.10.0</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -222,26 +227,13 @@
     <profiles>
         <profile>
             <id>autoInstallBundle</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.sling</groupId>
-                        <artifactId>maven-sling-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>install-bundle</id>
-                                <goals>
-                                    <goal>install</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <modules>
+                <module>bundle</module>
+                <module>content</module>
+            </modules>
         </profile>
     </profiles>
-  <modules>
-    <module>bundle</module>
-    <module>content</module>
-  </modules>
 </project>
